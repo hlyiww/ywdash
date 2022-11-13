@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "rollup -c"
+    "build": "rollup -c && node ./build/build.cjs"
   },
   "keywords": [],
   "author": "",
