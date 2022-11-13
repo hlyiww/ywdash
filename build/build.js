@@ -23,7 +23,7 @@ const autoIncreamentVersionByDefault = (version, limit = 10) => {
 const createPackageJson = (version) => `{
     "name": "pandash",
     "version": "${version}",
-    "main": "index.js",
+    "main": "index.cjs",
     "module": "index.js",
     "author": "yiwwhl",
     "github": "https://github.com/yiwwhl/pandash",
