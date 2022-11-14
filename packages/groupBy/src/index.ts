@@ -1,4 +1,4 @@
-type handlerType<T> = (...args: UnwrapArray<T>[]) => any;
+import { handlerType } from "./type";
 
 const groupBy = <T extends Array<any>>(
   collection: T,

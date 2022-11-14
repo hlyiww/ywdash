@@ -1,3 +1,3 @@
-type funcHandlerType<T> = (...args: UnwrapArray<T>[]) => any;
-type handlerType<T> = keyof UnwrapArray<T> | funcHandlerType<T>;
-type handlerTypeType = "string" | "function";
+export type funcHandlerType<T> = (...args: UnwrapArray<T>[]) => any;
+export type handlerType<T> = keyof UnwrapArray<T> | funcHandlerType<T>;
+export type handlerTypeType = "string" | "function";
