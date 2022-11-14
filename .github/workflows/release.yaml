@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Get version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
@@ -20,7 +24,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: export RELEASE_VERSION=${{ steps.get_version.outputs.VERSION }} && pnpm run build
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
