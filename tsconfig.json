@@ -9,16 +9,17 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "emitDeclarationOnly": true,
     "rootDir": "./packages",
     "outDir": "./dist",
-    "declarationDir": "./dist/types",
     "skipDefaultLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["vitest/globals", "vitest/importMeta"],
     "baseUrl": "./",
     "paths": {
       "@/*": ["packages/*"]
-    }
-  }
+    },
+  },
+  "include": [
+    "packages"
+  ]
 }

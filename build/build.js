@@ -1,7 +1,6 @@
 import fs from "fs";
-import path from "path";
 
-const autoIncreamentVersionByDefault = (version, limit = 10) => {
+const autoIncreamentVersionByDefault = (version, limit = 100) => {
   const versionList = version.split(".").map(Number);
   let target_first = versionList[0];
   let target_second = versionList[1];
@@ -26,24 +25,32 @@ const createPackageJson = (version) => `{
     "main": "index.cjs",
     "module": "index.js",
     "author": "yiwwhl",
-    "github": "https://github.com/yiwwhl/pandash",
+    "github": "https://github.com/hlyiww/pandash",
     "description": "yiwwhl pandash",
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/yiwwhl/pandash.git"
+      "url": "git+https://github.com/hlyiww/pandash.git"
     },
     "keywords": ["工具"],
     "license": "",
     "bugs": {
-      "url": "https://github.com/yiwwhl/pandash/issues"
+      "url": "https://github.com/hlyiww/pandash/issues"
+    },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org/",
+      "access": "public"
     }
   }`;
 
 const main = () => {
   let version = fs.readFileSync("./build/version", { encoding: "utf8" });
   version = autoIncreamentVersionByDefault(version);
+
+  console.log(version);
   fs.writeFileSync("./build/version", version);
-  fs.writeFileSync("./dist/package.json", createPackageJson(version));
+  fs.writeFileSync("./dist/package.json", createPackageJson(version), {
+    encoding: "utf8",
+  });
 };
 
 main();
