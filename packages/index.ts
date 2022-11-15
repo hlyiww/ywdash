@@ -1,4 +1,5 @@
 // export
+import "./_declare/GlobalType";
 
 import compose from "@/compose/src";
 import groupBy from "@/groupBy/src";
