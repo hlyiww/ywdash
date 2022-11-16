@@ -25,7 +25,7 @@ const createPackageJson = () => `{
 
 const main = () => {
   fs.writeFileSync("./dist/package.json", createPackageJson(), {
-    encoding: "utf8",
+    encoding: "utf-8",
   });
 };
 
