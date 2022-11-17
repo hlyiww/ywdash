@@ -13,12 +13,9 @@ const handlerMap = {
 const keyBy = <T extends Array<any>>(
   collection: T,
   handler: handlerType<T>
-) => {
+): { [key: keyof any]: UnwrapArray<T> } => {
   const handlerType = typeof handler as handlerTypeType;
-  if (handlerType in handlerMap) {
-    return handlerMap[handlerType](collection, handler);
-  }
-  console.warn("传入了不合法的 handler");
+  return handlerMap[handlerType](collection, handler);
 };
 
 export default keyBy;
