@@ -7,7 +7,7 @@ const createPackageJson = () => `{
     "module": "index.js",
     "author": "yiwwhl",
     "github": "https://github.com/hlyiww/ywdash",
-    "description": "yiwwhl pandash",
+    "description": "yiwwhl ywdash",
     "repository": {
       "type": "git",
       "url": "git+https://github.com/hlyiww/ywdash.git"
