@@ -1,5 +1,5 @@
 {
-  "name": "pandash",
+  "name": "ywdash",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "node ./build/buildIndex.js && rollup -c && node ./build/index.js"
+    "build": "node ./build/autoImport.js && rollup -c && node ./build/index.js"
   },
   "keywords": [],
   "author": "",
