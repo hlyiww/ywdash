@@ -1,4 +1,4 @@
-# Pandash
+# Ywdash
 
 Self-built lightweight `lodash` solutions
 
@@ -9,5 +9,5 @@ Self-built lightweight `lodash` solutions
 ## Installation
 
 ```bash
-pnpm add pandash
+pnpm add ywdash
 ```
