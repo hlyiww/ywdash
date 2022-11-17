@@ -1,4 +1,4 @@
-const chunk = (collection: Array<any>, size: number) => {
+const chunk = (collection: Array<any>, size: number): Array<any> => {
   let index = 0;
   return collection.reduce(
     (acc, cur) => (

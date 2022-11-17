@@ -3,7 +3,7 @@ import { handlerType } from "./type";
 const groupBy = <T extends Array<any>>(
   collection: T,
   handler: handlerType<T>
-) =>
+): ObjectType =>
   collection.reduce(
     (acc, cur) => (
       acc[handler(cur)] === undefined

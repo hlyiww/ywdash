@@ -1,7 +1,7 @@
 type FuncType = (...args: any[]) => any;
 
-type ObjectType<T, K = any> = {
-  [K in keyof T]: T[K];
+type ObjectType<T = any> = {
+  [key in keyof T]: T[key];
 };
 
 type UnwrapArray<T> = T extends Array<infer P> ? P : never;
