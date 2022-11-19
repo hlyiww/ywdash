@@ -23,8 +23,20 @@ const createPackageJson = () => `{
     }
   }`;
 
+const createReadme = () => `
+# Ywdash
+Self-built lightweight lodash solutions
+
+## Install
+
+pnpm add ywdash
+`;
+
 const main = () => {
   fs.writeFileSync("./dist/package.json", createPackageJson(), {
+    encoding: "utf-8",
+  });
+  fs.writeFileSync("./dist/README.md", createReadme(), {
     encoding: "utf-8",
   });
 };
