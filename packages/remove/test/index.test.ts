@@ -26,12 +26,7 @@ it('test 2', () => {
     return n.name === 'jack'
   })
 
-  expect(arr).toEqual([
-    {
-      name: 'john',
-      age: 16,
-    },
-  ])
+  expect(arr).toEqual([{ name: 'john', age: 16 }])
 
   expect(jack).toEqual([
     {
